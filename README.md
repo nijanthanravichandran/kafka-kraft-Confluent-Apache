@@ -20,8 +20,10 @@ Docker compose for Confluent & Apache Kafka without zookeeper
    
    Below metric shows the performance improvement with quorum controller:
    
+   ![Screen Shot 2022-11-15 at 8 57 45 PM](https://user-images.githubusercontent.com/108142931/201980948-fa2025d9-7125-4e66-9c3e-5006c2f339c4.png)
    
-   
-
+### Kraft Mode Setup:
+  How do you define that a broker is a controller? This is handled by a new broker setting called process.roles.
+  
 
 
