@@ -40,11 +40,19 @@ Best Practice:
 
 
 ### To know more about KRaft
-https://cwiki.apache.org/confluence/display/KAFKA/KIP-500%3A+Replace+ZooKeeper+with+a+Self-Managed+Metadata+Quorum
-https://cwiki.apache.org/confluence/display/KAFKA/KIP-833%3A+Mark+KRaft+as+Production+Ready
-https://www.confluent.io/blog/kafka-without-zookeeper-a-sneak-peek/
+> https://cwiki.apache.org/confluence/display/KAFKA/KIP-500%3A+Replace+ZooKeeper+with+a+Self-Managed+Metadata+Quorum
+> https://cwiki.apache.org/confluence/display/KAFKA/KIP-833%3A+Mark+KRaft+as+Production+Ready
+> https://www.confluent.io/blog/kafka-without-zookeeper-a-sneak-peek/
 
-# Setup - Confluent Kafka
+# Setup:
+  Before you start, you need to generate ID for the cluster. It needs to be a type-4 UUID. It can be generated using kafka storage tool
+  ```
+  bin/kafka-storage.sh random-uuid
+  This returns a UUID, for example 76BLQI7sT_ql1mBfKsOk9Q
+  ```
+  Update the UUID in kafka storage format command in the files kafka-kraft-Confluent-Apache/apache/start-kafka.sh and kafka-kraft-Confluent-Apache/confluent/Dockerfile
+  
+## Confluent Kafka KRaft
 ```
 clone the repo
 cd confluent
@@ -52,7 +60,7 @@ docker build -t nijanthan/confluentkafkakraft:7.2.1-3.2.0 .
 docker compose -f docker-compose.yml up -d .
 ```
 
-# Setup - Apache Kafka
+## Apache Kafka KRaft
 ```
 cd apache
 docker build -t nijanthan/apachekafkakraft .
