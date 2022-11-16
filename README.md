@@ -41,7 +41,9 @@ Best Practice:
 
 ### To know more about KRaft
 > https://cwiki.apache.org/confluence/display/KAFKA/KIP-500%3A+Replace+ZooKeeper+with+a+Self-Managed+Metadata+Quorum
+
 > https://cwiki.apache.org/confluence/display/KAFKA/KIP-833%3A+Mark+KRaft+as+Production+Ready
+
 > https://www.confluent.io/blog/kafka-without-zookeeper-a-sneak-peek/
 
 # Setup:
